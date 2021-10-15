@@ -1,0 +1,23 @@
+2021-10-15 13:00:01,743 INFO    MainThread:30488 [wandb_setup.py:_flush():69] setting env: {}
+2021-10-15 13:00:01,744 INFO    MainThread:30488 [wandb_setup.py:_flush():69] setting login settings: {}
+2021-10-15 13:00:01,744 INFO    MainThread:30488 [wandb_init.py:_log_setup():342] Logging user logs to /home/jungwoo/catkin_ws/src/AI504/Project1/wandb/run-20211015_130001-90lmjedo/logs/debug.log
+2021-10-15 13:00:01,745 INFO    MainThread:30488 [wandb_init.py:_log_setup():343] Logging internal logs to /home/jungwoo/catkin_ws/src/AI504/Project1/wandb/run-20211015_130001-90lmjedo/logs/debug-internal.log
+2021-10-15 13:00:01,746 INFO    MainThread:30488 [wandb_init.py:init():375] calling init triggers
+2021-10-15 13:00:01,746 INFO    MainThread:30488 [wandb_init.py:init():380] wandb.init called with sweep_config: {}
+config: {'batch_size': 128, 'num_epochs': 20, 'lr': 0.0002, 'beta1': 0.5}
+2021-10-15 13:00:01,747 INFO    MainThread:30488 [wandb_init.py:init():424] starting backend
+2021-10-15 13:00:01,748 INFO    MainThread:30488 [backend.py:_multiprocessing_setup():70] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2021-10-15 13:00:01,786 INFO    MainThread:30488 [backend.py:ensure_launched():135] starting backend process...
+2021-10-15 13:00:01,801 INFO    MainThread:30488 [backend.py:ensure_launched():139] started backend process with pid: 30504
+2021-10-15 13:00:01,802 INFO    MainThread:30488 [wandb_init.py:init():429] backend started and connected
+2021-10-15 13:00:01,804 INFO    MainThread:30488 [wandb_init.py:init():477] updated telemetry
+2021-10-15 13:00:01,804 INFO    MainThread:30488 [wandb_init.py:init():500] communicating current version
+2021-10-15 13:00:02,202 INFO    MainThread:30488 [wandb_init.py:init():505] got version response upgrade_message: "wandb version 0.12.4 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2021-10-15 13:00:02,202 INFO    MainThread:30488 [wandb_init.py:init():513] communicating run to backend with 30 second timeout
+2021-10-15 13:00:02,677 INFO    MainThread:30488 [wandb_init.py:init():540] starting run threads in backend
+2021-10-15 13:00:04,075 INFO    MainThread:30488 [wandb_run.py:_console_start():1584] atexit reg
+2021-10-15 13:00:04,075 INFO    MainThread:30488 [wandb_run.py:_redirect():1458] redirect: SettingsConsole.REDIRECT
+2021-10-15 13:00:04,075 INFO    MainThread:30488 [wandb_run.py:_redirect():1463] Redirecting console.
+2021-10-15 13:00:04,076 INFO    MainThread:30488 [wandb_run.py:_redirect():1519] Redirects installed.
+2021-10-15 13:00:04,077 INFO    MainThread:30488 [wandb_init.py:init():565] run started, returning control to user process

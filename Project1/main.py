@@ -19,7 +19,7 @@ import wandb
 import json
 # from IPython.display import HTML
 
-from model import Generator, Discriminator
+from dcgan import Generator, Discriminator
 from fid_score import calculate_fid_given_paths
 
 # Set random seed for reproducibility
@@ -38,8 +38,8 @@ image_size = 64
 
 nc = 3 # RGB
 nz = 100 # noise dim
-ngf = 64 # generator feature
-ndf = 64
+ngf = 128 # generator feature
+ndf = 128
 
 num_epochs = 20
 lr = 0.0002
