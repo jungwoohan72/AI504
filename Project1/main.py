@@ -19,7 +19,9 @@ import wandb
 import json
 # from IPython.display import HTML
 
-from dcgan import Generator, Discriminator
+# from dcgan import Generator, Discriminator
+from dcgan_dropout import Generator, Discriminator
+
 from fid_score import calculate_fid_given_paths
 
 # Set random seed for reproducibility
@@ -27,10 +29,10 @@ manualSeed = 999
 random.seed(manualSeed)
 torch.manual_seed(manualSeed)
 
-#
 dataroot = "dataset/celeba"
-workers = 2
+workers = 0
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+print(device)
 
 # Hyper Parameters
 batch_size = 128
@@ -38,8 +40,8 @@ image_size = 64
 
 nc = 3 # RGB
 nz = 100 # noise dim
-ngf = 128 # generator feature
-ndf = 128
+ngf = 64 # generator feature
+ndf = 64
 
 num_epochs = 20
 lr = 0.0002
@@ -95,8 +97,6 @@ with open(''.join((wandb.run.dir, 'config.json')), 'w') as f:
     json.dump(json_val, f)
 
 # Training
-img_list = []
-
 netG.train()
 netD.train()
 for epoch in range(num_epochs):
