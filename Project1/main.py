@@ -19,8 +19,9 @@ import wandb
 import json
 # from IPython.display import HTML
 
-# from dcgan import Generator, Discriminator
-from dcgan_dropout import Generator, Discriminator
+from dcgan import Generator, Discriminator
+# from dcgan_dropout import Generator, Discriminator
+from init_weight import weights_init
 
 from fid_score import calculate_fid_given_paths
 
@@ -63,6 +64,9 @@ dataloader = torch.utils.data.DataLoader(dataset, batch_size=batch_size,
 netG = Generator(nz, ngf, nc).to(device)
 netD = Discriminator(nc,ndf).to(device)
 
+netG.apply(weights_init)
+netD.apply(weights_init)
+
 optimizerG = optim.Adam(netG.parameters(), lr=lr, betas=(beta1, 0.999))
 optimizerD = optim.Adam(netD.parameters(), lr=lr, betas=(beta1, 0.999))
 
@@ -74,7 +78,6 @@ fixed_noise = torch.randn(64, nz, 1, 1, device=device) # For visualization
 
 # For logging and resume training
 continue_train = False
-PATH = './wandb/run-20210907_192815-2m331w16/'
 
 log_dict = dict()
 
