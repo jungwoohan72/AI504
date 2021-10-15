@@ -49,7 +49,9 @@ for i, data in enumerate(dataloader):
 
 # 1000 fake images
 test_noise = torch.randn(1000, nz, 1, 1, device = device)
-fake_dataset = netG(test_noise)
+netG.eval()
+with torch.no_grad():
+    fake_dataset = netG(test_noise)
 
 # Path specification
 if not os.path.exists('/img'):

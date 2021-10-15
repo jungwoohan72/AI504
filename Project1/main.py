@@ -97,6 +97,8 @@ with open(''.join((wandb.run.dir, 'config.json')), 'w') as f:
 # Training
 img_list = []
 
+netG.train()
+netD.train()
 for epoch in range(num_epochs):
     for i, data in enumerate(dataloader, 0):
         # Discriminator update
@@ -130,6 +132,7 @@ for epoch in range(num_epochs):
 
         log_dict['Loss_D'] = errD
         log_dict['Loss_G'] = errG
+        log_dict['D(x)'] = D_real
         log_dict['D(G(z))_1'] = D_G_z1
         log_dict['D(G(z))_2'] = D_G_z2
         log_dict['epoch'] = epoch
@@ -159,7 +162,9 @@ for i, data in enumerate(dataloader):
 
 # 1000 fake images
 test_noise = torch.randn(1000, nz, 1, 1, device = device)
-fake_dataset = netG(test_noise)
+netG.eval()
+with torch.no_grad():
+    fake_dataset = netG(test_noise)
 
 # Path specification
 if not os.path.exists('/img'):
