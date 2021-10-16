@@ -1,20 +1,12 @@
 from __future__ import print_function
 #%matplotlib inline
-import argparse
 import os
 import random
-import torch
-import torch.nn as nn
-import torch.nn.parallel
-import torch.backends.cudnn as cudnn
 import torch.optim as optim
 import torch.utils.data
 import torchvision.datasets as dset
 import torchvision.transforms as transforms
 import torchvision.utils as vutils
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 import wandb
 import json
 # from IPython.display import HTML
@@ -23,9 +15,7 @@ import json
 # from dcgan_dropout import Generator, Discriminator
 from wgan import Generator, Discriminator
 
-from calc_gradient_penalty import calc_gradient_penalty
-
-from init_weight import weights_init
+from Project1.calc_gradient_penalty import calc_gradient_penalty
 
 from fid_score import calculate_fid_given_paths
 
