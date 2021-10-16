@@ -69,7 +69,7 @@ class Discriminator(nn.Module):
             nn.InstanceNorm2d(dis_filter * 8, affine=True),
             nn.LeakyReLU(0.2, inplace=True),
             # state size. (ndf*8) x 4 x 4
-            nn.Conv2d(dis_filter * 8, 1, 4),
+            nn.Conv2d(dis_filter * 8, 1, 2),
         )
 
         self.init_weight()
