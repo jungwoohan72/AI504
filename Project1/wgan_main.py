@@ -23,6 +23,8 @@ import json
 # from dcgan_dropout import Generator, Discriminator
 from wgan import Generator, Discriminator
 
+from calc_gradient_penalty import calc_gradient_penalty
+
 from init_weight import weights_init
 
 from fid_score import calculate_fid_given_paths
@@ -66,17 +68,11 @@ dataloader = torch.utils.data.DataLoader(dataset, batch_size=batch_size,
 netG = Generator(nz, ngf, nc).to(device)
 netD = Discriminator(nc,ndf).to(device)
 
-netG.apply(weights_init)
-netD.apply(weights_init)
-
 optimizerG = optim.Adam(netG.parameters(), lr=lr, betas=(beta1, 0.999))
 optimizerD = optim.Adam(netD.parameters(), lr=lr, betas=(beta1, 0.999))
 
-criterion = nn.BCELoss()
 real_label = 1.
 fake_label = 0.
-
-fixed_noise = torch.randn(64, nz, 1, 1, device=device) # For visualization
 
 # For logging and resume training
 continue_train = False
@@ -102,49 +98,42 @@ with open(''.join((wandb.run.dir, 'config.json')), 'w') as f:
     json.dump(json_val, f)
 
 # Training
-netG.train()
-netD.train()
 for epoch in range(num_epochs):
     for i, data in enumerate(dataloader, 0):
         # Discriminator update
         netD.zero_grad()
         img_batch = data[0].to(device) # shape: [128, 3, 64, 64]
         b_size = img_batch.size(0)
-        output = netD(img_batch).view(-1)
-        label = torch.full((b_size,), real_label, dtype = torch.float, device = device)
-        errD_real = criterion(output, label)
-        errD_real.backward()
-        D_real = output.mean().item() # correction rate
+        logits_D_real = netD(img_batch).view(-1)
+        loss_D_real = -logits_D_real.mean()
 
-        noise = torch.randn(b_size, nz, 1, 1, device = device)
+        noise = torch.randn(b_size, nz, 1, 1, device=device)
         fake = netG(noise)
-        label = label.fill_(fake_label)
-        output = netD(fake.detach()).view(-1)
-        errD_fake = criterion(output, label)
-        errD_fake.backward()
-        D_G_z1 = output.mean().item() # correction rate
-        errD = errD_real + errD_fake
+        logits_D_fake = netD(fake.detach()).view(-1)
+        loss_D_fake = logits_D_fake.mean()
+
+        gradient_penalty = calc_gradient_penalty(netD, data, fake, b_size, nc, image_size)
+        Wasserstein_D = loss_D_fake + loss_D_real
+        loss_D = Wasserstein_D + gradient_penalty
+        loss_D.backward()
+
         optimizerD.step()
 
         # Generator update
         netG.zero_grad()
-        output = netD(fake).view(-1)
-        label = label.fill_(real_label)
-        errG = criterion(output, label)
-        errG.backward()
-        D_G_z2 = output.mean().item()
+        logits_G = netD(fake).view(-1)
+        loss_G = -logits_G.mean()
+        loss_G.backward()
         optimizerG.step()
 
-        log_dict['Loss_D'] = errD
-        log_dict['Loss_G'] = errG
-        log_dict['D(x)'] = D_real
-        log_dict['D(G(z))_1'] = D_G_z1
-        log_dict['D(G(z))_2'] = D_G_z2
+        log_dict['Loss_D_fake'] = loss_D_fake
+        log_dict['Loss_G'] = loss_G
+        log_dict['Loss_D_real'] = loss_D_real
         log_dict['epoch'] = epoch
         wandb.log(log_dict)
 
         if i % 500 == 0:
-            print('[%d/%d][%d/%d]\tLoss_D: %.4f\tLoss_G: %.4f\tD(x): %.4f\tD(G(z)): %.4f / %.4f' % (epoch, num_epochs, i, len(dataloader), errD.item(), errG.item(), D_real, D_G_z1, D_G_z2))
+            print('[%d/%d][%d/%d]\tLoss_D: %.4f\tLoss_G: %.4f\tD(x): %.4f\tD(G(z)): %.4f / %.4f' % (epoch, num_epochs, i, len(dataloader), loss_D_fake.item(), loss_G.item(), loss_D_real))
 
     torch.save(netG.state_dict(), './Weights/netG_epoch_%d.pt' % epoch)
     torch.save(netD.state_dict(), './Weights/netD_epoch_%d.pt' % epoch)
