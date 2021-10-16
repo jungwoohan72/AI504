@@ -56,7 +56,7 @@ dataloader = torch.utils.data.DataLoader(dataset, batch_size=batch_size,
 
 # Generator & Discriminator Initialization
 netG = Generator(nz, ngf, nc).to(device)
-netD = Discriminator(nc,ndf).to(device)
+netD = Discriminator(nc, ndf).to(device)
 
 optimizerG = optim.Adam(netG.parameters(), lr=lr, betas=(beta1, 0.999))
 optimizerD = optim.Adam(netD.parameters(), lr=lr, betas=(beta1, 0.999))

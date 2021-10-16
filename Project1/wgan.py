@@ -50,7 +50,7 @@ class Discriminator(nn.Module):
         super(Discriminator, self).__init__()
         self.main = nn.Sequential(
             # input is (nc) x 64 x 64
-            nn.Conv2d(input_dim, dis_filter // 2, 5, 2, 2, bias=False),
+            nn.Conv2d(input_dim, dis_filter // 2, 5, 2, 2),
             nn.LeakyReLU(0.2, inplace=True),
             # state size. (ndf) x 32 x 32
             nn.Conv2d(dis_filter // 2, dis_filter, 5, 2, 2, bias=False),
@@ -58,18 +58,18 @@ class Discriminator(nn.Module):
             nn.LeakyReLU(0.2, inplace=True),
             # state size. (ndf*2) x 16 x 16
             nn.Conv2d(dis_filter, dis_filter * 2, 5, 2, 2, bias=False),
-            nn.InstanceNorm2d(dis_filter, affine = True),
+            nn.InstanceNorm2d(dis_filter * 2, affine = True),
             nn.LeakyReLU(0.2, inplace=True),
             # state size. (ndf*4) x 8 x 8
             nn.Conv2d(dis_filter * 2, dis_filter * 4, 5, 2, 2, bias=False),
-            nn.InstanceNorm2d(dis_filter, affine = True),
+            nn.InstanceNorm2d(dis_filter * 4, affine = True),
             nn.LeakyReLU(0.2, inplace=True),
             # state size. (ndf*4) x 8 x 8
             nn.Conv2d(dis_filter * 4, dis_filter * 8, 5, 2, 2, bias=False),
-            nn.InstanceNorm2d(dis_filter, affine=True),
+            nn.InstanceNorm2d(dis_filter * 8, affine=True),
             nn.LeakyReLU(0.2, inplace=True),
             # state size. (ndf*8) x 4 x 4
-            nn.Conv2d(dis_filter * 8, 1, 4, 1, 0, bias=False),
+            nn.Conv2d(dis_filter * 8, 1, 4),
         )
 
         self.init_weight()
