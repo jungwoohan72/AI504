@@ -11,8 +11,15 @@ from torch.autograd import Variable
 import torchvision
 import torchvision.datasets as dsets
 import torchvision.transforms as transforms
+import torchvision.utils as vutils
+
+from fid_score import calculate_fid_given_paths
+
 import utils
 
+import wandb
+import json
+import os
 
 def gradient_penalty(x, y, f):
     # interpolation
@@ -29,7 +36,7 @@ def gradient_penalty(x, y, f):
     return gp
 
 """ gpu """
-gpu_id = [2]
+gpu_id = [0]
 utils.cuda_devices(gpu_id)
 
 
@@ -39,6 +46,7 @@ batch_size = 64
 n_critic = 5
 lr = 0.0002
 z_dim = 100
+num_workers = 4
 
 
 """ data """
@@ -48,7 +56,7 @@ re_size = 64
 # offset_width = (178 - crop_size) // 2
 # crop = lambda x: x[:, offset_height:offset_height + crop_size, offset_width:offset_width + crop_size]
 
-dataroot = "dataset/celeba"
+dataroot = "dataset/celeba/"
 dataset = dsets.ImageFolder(root=dataroot,
                            transform=transforms.Compose([
                                transforms.Resize(re_size),
@@ -59,7 +67,7 @@ dataset = dsets.ImageFolder(root=dataroot,
 data_loader = torch.utils.data.DataLoader(dataset,
                                           batch_size=batch_size,
                                           shuffle=True,
-                                          num_workers=0)
+                                          num_workers=num_workers)
 
 
 """ model """
@@ -90,6 +98,22 @@ g_optimizer = torch.optim.Adam(G.parameters(), lr=lr, betas=(0.5, 0.999))
 
 z_sample = Variable(torch.randn(100, z_dim))
 z_sample = utils.cuda(z_sample)
+
+log_dict = dict()
+
+config = {
+    "batch_size":batch_size,
+    "num_epochs":epochs,
+    "lr": lr,
+    "beta1": 0.5
+}
+
+wandb.init(project = 'DCGAN', config = config)
+
+json_val = json.dumps(config)
+with open(''.join((wandb.run.dir, 'config.json')), 'w') as f:
+    json.dump(json_val, f)
+
 for epoch in range(0, epochs):
     for i, (imgs, _) in enumerate(data_loader):
         # step
@@ -137,8 +161,14 @@ for epoch in range(0, epochs):
             #                    {"g_loss": g_loss.data.cpu().numpy()},
             #                    global_step=step)
 
-        if (i + 1) % 1 == 0:
-            print("Epoch: (%3d) (%5d/%5d)" % (epoch, i + 1, len(data_loader)))
+        log_dict['Loss_D'] = d_loss
+        log_dict['Loss_G'] = g_loss
+        log_dict['epoch'] = epoch
+        wandb.log(log_dict)
+
+        if i % 500 == 0:
+            print('[%d/%d][%d/%d]\tLoss_D: %.4f\tLoss_G: %.4f' % (
+            epoch, epochs, i, len(data_loader), d_loss.item(), g_loss.item()))
 
         if (i + 1) % 100 == 0:
             G.eval()
@@ -148,10 +178,53 @@ for epoch in range(0, epochs):
             utils.mkdir(save_dir)
             torchvision.utils.save_image(f_imgs_sample, '%s/Epoch_(%d)_(%dof%d).jpg' % (save_dir, epoch, i + 1, len(data_loader)), nrow=10)
 
-    # utils.save_checkpoint({'epoch': epoch + 1,
-    #                        'D': D.state_dict(),
-    #                        'G': G.state_dict(),
-    #                        'd_optimizer': d_optimizer.state_dict(),
-    #                        'g_optimizer': g_optimizer.state_dict()},
-    #                       '%s/Epoch_(%d).ckpt' % (ckpt_dir, epoch + 1),
-    #                       max_keep=2)
+    torch.save(G.state_dict(), './Weights/netG_epoch_%d.pt' % epoch)
+    torch.save(D.state_dict(), './Weights/netD_epoch_%d.pt' % epoch)
+
+# 1000 real images
+dataset = dsets.ImageFolder(root=dataroot,
+                           transform=transforms.Compose([
+                               transforms.Resize(re_size),
+                               transforms.CenterCrop(re_size),
+                               transforms.ToTensor(),
+                               transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
+                           ]))
+
+dataloader = torch.utils.data.DataLoader(dataset, batch_size=1000,
+                                         shuffle=True, num_workers=num_workers)
+
+for i, data in enumerate(dataloader):
+    real_dataset = data[0]
+    break
+
+# 1000 fake images
+test_noise = Variable(torch.randn(1000, z_dim))
+test_noise = utils.cuda(test_noise)
+
+G.eval()
+with torch.no_grad():
+    fake_dataset = G(test_noise)
+
+# Path specification
+if not os.path.exists('/img'):
+    os.mkdir('./img')
+
+if not os.path.exists('/img/real'):
+    os.mkdir('./img/real')
+
+if not os.path.exists('/img/fake'):
+    os.mkdir('./img/fake')
+
+# Saving
+base_path = ['./img/real', './img/fake']
+dataset = [real_dataset, fake_dataset]
+
+for i in range(2):
+    for j in range(1000):
+        save_path = f'{base_path[i]}/image_{j}.png'
+        vutils.save_image((dataset[i][j]*0.5) + 0.5, save_path)
+
+# FID value
+
+fid_value = calculate_fid_given_paths(['./img/real', './img/fake'], 50, False, 2048)
+print(f'FID score: {fid_value}')
