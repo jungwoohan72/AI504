@@ -2,3 +2,13 @@
 /Project1/img/
 /Project1/dataset/
 /Project1/Weights/
+/Project1/Weights_32/
+/Project1/Weights_64_Dropout/
+/Project1/Weights_64_NoDropout/
+/Project1/Weights_64_NoDropout_Batch16/
+/Project1/Weights_wgan/
+/Project1/sample_images_while_training/
+/Project1/sample_images_while_training_wgan1/
+/Project1/wandb/
+/Project1/64_39Epoch_FID39/
+/Project1/32_50Epoch_FID53/

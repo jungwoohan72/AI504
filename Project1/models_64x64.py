@@ -53,12 +53,23 @@ class Generator(nn.Module):
             dconv_bn_relu(dim * 2, dim),
             nn.ConvTranspose2d(dim, 3, 5, 2, padding=2, output_padding=1),
             nn.Tanh())
+        self.init_weight()
 
     def forward(self, x):
         y = self.l1(x)
         y = y.view(y.size(0), -1, 4, 4)
         y = self.l2_5(y)
         return y
+
+    def init_weight(self):
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d) or isinstance(m, nn.ConvTranspose2d):
+                # print('here')
+                nn.init.kaiming_normal_(m.weight, mode='fan_out', nonlinearity='leaky_relu')
+            elif isinstance(m, nn.BatchNorm2d) or isinstance(m, nn.BatchNorm1d):
+                m.weight.data.normal_(1.0, 0.02)
+                m.bias.data.fill_(0)
+
 
 
 class Discriminator(nn.Module):
@@ -105,7 +116,18 @@ class DiscriminatorWGANGP(nn.Module):
             conv_ln_lrelu(dim * 4, dim * 8),
             nn.Conv2d(dim * 8, 1, 4))
 
+        self.init_weight()
+
     def forward(self, x):
         y = self.ls(x)
         y = y.view(-1)
         return y
+
+    def init_weight(self):
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d) or isinstance(m, nn.ConvTranspose2d):
+                # print('here')
+                nn.init.kaiming_normal_(m.weight, mode='fan_out', nonlinearity='leaky_relu')
+            elif isinstance(m, nn.BatchNorm2d) or isinstance(m, nn.BatchNorm1d):
+                m.weight.data.normal_(1.0, 0.02)
+                m.bias.data.fill_(0)

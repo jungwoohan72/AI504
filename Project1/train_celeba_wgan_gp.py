@@ -41,12 +41,13 @@ utils.cuda_devices(gpu_id)
 
 
 """ param """
-epochs = 50
+epochs = 100
 batch_size = 64
 n_critic = 5
 lr = 0.0002
 z_dim = 100
 num_workers = 4
+f_dim = 64
 
 
 """ data """
@@ -71,9 +72,16 @@ data_loader = torch.utils.data.DataLoader(dataset,
 
 
 """ model """
-D = models_64x64.DiscriminatorWGANGP(3)
-G = models_64x64.Generator(z_dim)
+D = models_64x64.DiscriminatorWGANGP(3, f_dim)
+G = models_64x64.Generator(z_dim, f_dim)
 utils.cuda([D, G])
+
+continue_train = False
+
+if continue_train:
+    resume_epoch = 49
+    G.load_state_dict(torch.load('./Weights/netG_epoch_%d.pt' % resume_epoch))
+    D.load_state_dict(torch.load('./Weights/netD_epoch_%d.pt' % resume_epoch))
 
 d_optimizer = torch.optim.Adam(D.parameters(), lr=lr, betas=(0.5, 0.999))
 g_optimizer = torch.optim.Adam(G.parameters(), lr=lr, betas=(0.5, 0.999))
@@ -157,18 +165,20 @@ for epoch in range(0, epochs):
             g_loss.backward()
             g_optimizer.step()
 
+            log_dict['Loss_G'] = g_loss.item()
+
             # writer.add_scalars('G',
             #                    {"g_loss": g_loss.data.cpu().numpy()},
             #                    global_step=step)
 
-        log_dict['Loss_D'] = d_loss
-        log_dict['Loss_G'] = g_loss
+        log_dict['Loss_D/wd'] = wd.item()
+        log_dict['Loss_D/gp'] = gp.item()
         log_dict['epoch'] = epoch
         wandb.log(log_dict)
 
         if i % 500 == 0:
-            print('[%d/%d][%d/%d]\tLoss_D: %.4f\tLoss_G: %.4f' % (
-            epoch, epochs, i, len(data_loader), d_loss.item(), g_loss.item()))
+            print('[%d/%d][%d/%d]\tLoss_D: %.4f' % (
+            epoch, epochs, i, len(data_loader), d_loss.item()))
 
         if (i + 1) % 100 == 0:
             G.eval()
