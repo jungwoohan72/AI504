@@ -53,9 +53,6 @@ f_dim = 64
 """ data """
 crop_size = 108
 re_size = 64
-# offset_height = (218 - crop_size) // 2
-# offset_width = (178 - crop_size) // 2
-# crop = lambda x: x[:, offset_height:offset_height + crop_size, offset_width:offset_width + crop_size]
 
 dataroot = "dataset/celeba/"
 dataset = dsets.ImageFolder(root=dataroot,
@@ -70,39 +67,20 @@ data_loader = torch.utils.data.DataLoader(dataset,
                                           shuffle=True,
                                           num_workers=num_workers)
 
-
 """ model """
-D = models_64x64.DiscriminatorWGANGP(3, f_dim)
-G = models_64x64.Generator(z_dim, f_dim)
+D = models_64x64.DiscriminatorWGANGP(3)
+G = models_64x64.Generator(z_dim)
 utils.cuda([D, G])
 
-continue_train = False
+continue_train = True
 
 if continue_train:
-    resume_epoch = 49
+    resume_epoch = 12
     G.load_state_dict(torch.load('./Weights/netG_epoch_%d.pt' % resume_epoch))
     D.load_state_dict(torch.load('./Weights/netD_epoch_%d.pt' % resume_epoch))
 
 d_optimizer = torch.optim.Adam(D.parameters(), lr=lr, betas=(0.5, 0.999))
 g_optimizer = torch.optim.Adam(G.parameters(), lr=lr, betas=(0.5, 0.999))
-
-""" load checkpoint """
-# ckpt_dir = './checkpoints/celeba_wgan_gp'
-# utils.mkdir(ckpt_dir)
-# try:
-#     ckpt = utils.load_checkpoint(ckpt_dir)
-#     start_epoch = ckpt['epoch']
-#     D.load_state_dict(ckpt['D'])
-#     G.load_state_dict(ckpt['G'])
-#     d_optimizer.load_state_dict(ckpt['d_optimizer'])
-#     g_optimizer.load_state_dict(ckpt['g_optimizer'])
-# except:
-#     print(' [*] No checkpoint!')
-#     start_epoch = 0
-
-
-""" run """
-# writer = tensorboardX.SummaryWriter('./summaries/celeba_wgan_gp')
 
 z_sample = Variable(torch.randn(100, z_dim))
 z_sample = utils.cuda(z_sample)
@@ -122,7 +100,7 @@ json_val = json.dumps(config)
 with open(''.join((wandb.run.dir, 'config.json')), 'w') as f:
     json.dump(json_val, f)
 
-for epoch in range(0, epochs):
+for epoch in range(13, epochs):
     for i, (imgs, _) in enumerate(data_loader):
         # step
         step = epoch * len(data_loader) + i + 1
@@ -131,7 +109,7 @@ for epoch in range(0, epochs):
         G.train()
 
         # leafs
-        imgs = Variable(imgs)
+        imgs = Variable((imgs*0.5)+0.5)
         bs = imgs.size(0)
         z = Variable(torch.randn(bs, z_dim))
         imgs, z = utils.cuda([imgs, z])
@@ -150,9 +128,6 @@ for epoch in range(0, epochs):
         d_loss.backward()
         d_optimizer.step()
 
-        # writer.add_scalar('D/wd', wd.data.cpu().numpy(), global_step=step)
-        # writer.add_scalar('D/gp', gp.data.cpu().numpy(), global_step=step)
-
         if step % n_critic == 0:
             # train G
             z = utils.cuda(Variable(torch.randn(bs, z_dim)))
@@ -166,10 +141,6 @@ for epoch in range(0, epochs):
             g_optimizer.step()
 
             log_dict['Loss_G'] = g_loss.item()
-
-            # writer.add_scalars('G',
-            #                    {"g_loss": g_loss.data.cpu().numpy()},
-            #                    global_step=step)
 
         log_dict['Loss_D/wd'] = wd.item()
         log_dict['Loss_D/gp'] = gp.item()
@@ -190,51 +161,3 @@ for epoch in range(0, epochs):
 
     torch.save(G.state_dict(), './Weights/netG_epoch_%d.pt' % epoch)
     torch.save(D.state_dict(), './Weights/netD_epoch_%d.pt' % epoch)
-
-# 1000 real images
-dataset = dsets.ImageFolder(root=dataroot,
-                           transform=transforms.Compose([
-                               transforms.Resize(re_size),
-                               transforms.CenterCrop(re_size),
-                               transforms.ToTensor(),
-                               transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
-                           ]))
-
-dataloader = torch.utils.data.DataLoader(dataset, batch_size=1000,
-                                         shuffle=True, num_workers=num_workers)
-
-for i, data in enumerate(dataloader):
-    real_dataset = data[0]
-    break
-
-# 1000 fake images
-test_noise = Variable(torch.randn(1000, z_dim))
-test_noise = utils.cuda(test_noise)
-
-G.eval()
-with torch.no_grad():
-    fake_dataset = G(test_noise)
-
-# Path specification
-if not os.path.exists('/img'):
-    os.mkdir('./img')
-
-if not os.path.exists('/img/real'):
-    os.mkdir('./img/real')
-
-if not os.path.exists('/img/fake'):
-    os.mkdir('./img/fake')
-
-# Saving
-base_path = ['./img/real', './img/fake']
-dataset = [real_dataset, fake_dataset]
-
-for i in range(2):
-    for j in range(1000):
-        save_path = f'{base_path[i]}/image_{j}.png'
-        vutils.save_image((dataset[i][j]*0.5) + 0.5, save_path)
-
-# FID value
-
-fid_value = calculate_fid_given_paths(['./img/real', './img/fake'], 50, False, 2048)
-print(f'FID score: {fid_value}')
