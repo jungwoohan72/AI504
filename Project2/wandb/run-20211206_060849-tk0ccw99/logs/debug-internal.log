@@ -1,0 +1,761 @@
+2021-12-06 06:08:49,570 INFO    MainThread:9993 [internal.py:wandb_internal():86] W&B internal server running at pid: 9993, started at: 2021-12-06 06:08:49.570760
+2021-12-06 06:08:49,572 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: check_version
+2021-12-06 06:08:49,573 INFO    WriterThread:9993 [datastore.py:open_for_write():77] open: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/run-tk0ccw99.wandb
+2021-12-06 06:08:49,574 DEBUG   SenderThread:9993 [sender.py:send():182] send: header
+2021-12-06 06:08:49,574 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: check_version
+2021-12-06 06:08:49,610 DEBUG   SenderThread:9993 [sender.py:send():182] send: run
+2021-12-06 06:08:49,842 INFO    SenderThread:9993 [dir_watcher.py:__init__():168] watching files in: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files
+2021-12-06 06:08:49,842 INFO    SenderThread:9993 [sender.py:_start_run_threads():740] run started: tk0ccw99 with start time 1638738529
+2021-12-06 06:08:49,842 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:08:49,842 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:08:49,842 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: run_start
+2021-12-06 06:08:50,709 DEBUG   HandlerThread:9993 [meta.py:__init__():39] meta init
+2021-12-06 06:08:50,709 DEBUG   HandlerThread:9993 [meta.py:__init__():53] meta init done
+2021-12-06 06:08:50,709 DEBUG   HandlerThread:9993 [meta.py:probe():210] probe
+2021-12-06 06:08:50,715 DEBUG   HandlerThread:9993 [meta.py:_setup_git():200] setup git
+2021-12-06 06:08:50,728 DEBUG   HandlerThread:9993 [meta.py:_setup_git():207] setup git done
+2021-12-06 06:08:50,728 DEBUG   HandlerThread:9993 [meta.py:_save_pip():57] save pip
+2021-12-06 06:08:50,729 DEBUG   HandlerThread:9993 [meta.py:_save_pip():71] save pip done
+2021-12-06 06:08:50,729 DEBUG   HandlerThread:9993 [meta.py:_save_conda():78] save conda
+2021-12-06 06:08:50,843 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/conda-environment.yaml
+2021-12-06 06:08:50,844 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:08:50,844 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/requirements.txt
+2021-12-06 06:08:52,636 DEBUG   HandlerThread:9993 [meta.py:_save_conda():86] save conda done
+2021-12-06 06:08:52,636 DEBUG   HandlerThread:9993 [meta.py:probe():252] probe done
+2021-12-06 06:08:52,638 DEBUG   SenderThread:9993 [sender.py:send():182] send: files
+2021-12-06 06:08:52,638 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-metadata.json with policy now
+2021-12-06 06:08:52,641 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:08:52,641 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:08:52,847 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/conda-environment.yaml
+2021-12-06 06:08:52,847 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-metadata.json
+2021-12-06 06:08:52,847 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/output.log
+2021-12-06 06:08:53,276 INFO    Thread-11 :9993 [upload_job.py:push():137] Uploaded file /tmp/tmp81nsc2ijwandb/3it86c4k-wandb-metadata.json
+2021-12-06 06:09:08,057 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:09:08,057 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:09:08,760 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:09:08,760 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:09:08,762 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:09:08,764 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:09:08,765 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:09:08,770 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:09:08,850 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:09:18,937 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:09:19,802 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:09:19,802 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:09:19,802 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:09:19,807 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:09:19,807 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:09:19,811 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:09:19,852 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:09:23,243 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:09:23,244 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:09:31,111 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:09:31,112 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:09:31,113 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:09:31,116 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:09:31,117 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:09:31,122 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:09:31,855 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:09:38,434 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:09:38,434 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:09:42,012 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:09:42,012 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:09:42,014 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:09:42,017 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:09:42,017 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:09:42,023 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:09:42,857 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:09:49,165 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:09:53,051 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:09:53,051 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:09:53,052 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:09:53,056 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:09:53,056 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:09:53,060 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:09:53,631 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:09:53,631 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:09:53,860 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:10:04,147 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:10:04,147 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:10:04,147 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:10:04,152 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:10:04,152 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:10:04,156 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:10:04,862 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:10:08,817 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:10:08,817 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:10:14,930 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:10:14,931 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:10:14,931 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:10:14,935 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:10:14,936 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:10:14,939 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:10:15,864 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:10:19,397 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:10:24,005 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:10:24,006 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:10:25,916 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:10:25,916 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:10:25,918 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:10:25,921 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:10:25,921 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:10:25,926 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:10:26,866 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:10:36,932 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:10:36,932 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:10:36,932 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:10:36,937 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:10:36,937 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:10:36,940 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:10:37,869 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:10:39,196 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:10:39,196 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:10:48,190 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:10:48,190 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:10:48,191 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:10:48,195 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:10:48,195 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:10:48,199 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:10:48,871 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:10:49,628 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:10:54,383 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:10:54,383 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:10:58,862 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:10:58,862 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:10:58,864 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:10:58,867 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:10:58,867 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:10:58,873 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:10:58,873 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:11:09,574 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:11:09,574 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:11:09,918 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:11:09,918 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:11:09,918 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:11:09,923 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:11:09,923 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:11:09,927 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:11:10,876 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:11:19,856 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:11:21,166 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:11:21,166 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:11:21,167 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:11:21,171 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:11:21,171 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:11:21,175 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:11:21,878 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:11:24,767 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:11:24,767 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:11:32,292 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:11:32,292 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:11:32,292 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:11:32,297 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:11:32,297 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:11:32,301 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:11:32,880 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:11:39,952 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:11:39,952 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:11:43,275 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:11:43,276 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:11:43,276 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:11:43,280 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:11:43,281 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:11:43,281 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:11:43,883 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:11:50,079 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:11:54,207 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:11:54,208 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:11:54,209 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:11:54,212 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:11:54,213 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:11:54,218 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:11:54,885 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:11:55,143 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:11:55,143 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:12:05,424 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:12:05,425 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:12:05,425 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:12:05,429 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:12:05,430 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:12:05,433 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:12:05,887 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:12:10,341 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:12:10,342 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:12:16,130 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:12:16,130 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:12:16,130 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:12:16,135 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:12:16,135 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:12:16,139 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:12:16,890 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:12:20,325 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:12:25,529 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:12:25,529 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:12:27,032 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:12:27,033 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:12:27,035 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:12:27,037 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:12:27,038 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:12:27,038 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:12:27,892 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:12:38,084 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:12:38,091 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:12:38,092 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:12:38,092 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:12:38,092 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:12:38,092 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:12:38,895 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:12:40,718 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:12:40,718 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:12:49,105 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:12:49,105 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:12:49,105 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:12:49,110 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:12:49,110 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:12:49,113 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:12:49,897 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:12:50,551 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:12:55,906 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:12:55,906 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:13:00,271 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:13:00,271 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:13:00,273 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:13:00,276 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:13:00,276 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:13:00,281 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:13:00,899 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:13:11,103 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:13:11,103 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:13:11,303 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:13:11,303 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:13:11,303 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:13:11,308 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:13:11,308 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:13:11,312 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:13:11,901 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:13:20,771 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:13:22,682 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:13:22,682 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:13:22,683 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:13:22,687 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:13:22,687 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:13:22,691 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:13:22,904 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:13:26,293 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:13:26,294 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:13:33,752 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:13:33,752 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:13:33,752 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:13:33,757 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:13:33,757 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:13:33,761 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:13:33,906 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:13:41,483 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:13:41,483 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:13:44,696 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:13:44,696 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:13:44,697 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:13:44,701 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:13:44,701 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:13:44,705 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:13:44,909 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:13:50,999 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:13:55,609 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:13:55,609 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:13:55,609 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:13:55,614 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:13:55,614 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:13:55,618 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:13:55,911 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:13:56,671 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:13:56,672 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:14:06,720 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:14:06,720 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:14:06,721 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:14:06,725 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:14:06,725 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:14:06,729 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:14:06,913 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:14:11,874 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:14:11,874 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:14:17,656 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:14:17,657 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:14:17,658 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:14:17,661 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:14:17,662 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:14:17,662 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:14:17,915 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:14:21,225 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:14:27,073 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:14:27,073 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:14:28,298 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:14:28,298 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:14:28,298 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:14:28,303 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:14:28,303 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:14:28,306 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:14:28,918 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:14:39,285 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:14:39,285 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:14:39,285 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:14:39,290 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:14:39,290 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:14:39,294 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:14:39,920 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:14:42,264 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:14:42,264 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:14:50,053 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:14:50,053 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:14:50,061 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:14:50,061 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:14:50,061 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:14:50,061 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:14:50,922 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:14:51,457 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:14:57,449 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:14:57,449 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:15:01,032 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:15:01,032 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:15:01,033 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:15:01,037 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:15:01,037 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:15:01,041 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:15:01,925 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:15:11,924 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:15:11,924 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:15:11,924 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:15:11,927 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:15:11,929 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:15:11,929 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:15:11,932 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:15:12,641 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:15:12,642 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:15:12,927 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:15:21,678 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:15:22,842 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:15:22,842 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:15:22,842 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:15:22,847 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:15:22,847 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:15:22,847 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:15:22,929 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:15:27,832 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:15:27,832 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:15:33,853 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:15:33,853 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:15:33,853 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:15:33,858 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:15:33,858 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:15:33,858 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:15:33,932 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:15:43,022 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:15:43,023 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:15:44,929 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:15:44,929 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:15:44,929 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:15:44,934 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:15:44,934 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:15:44,935 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:15:44,938 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:15:45,935 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:15:51,917 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:15:56,201 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:15:56,201 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:15:56,201 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:15:56,206 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:15:56,206 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:15:56,210 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:15:56,937 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:15:58,207 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:15:58,208 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:16:07,123 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:16:07,124 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:16:07,124 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:16:07,128 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:16:07,129 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:16:07,129 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:16:07,939 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:16:13,396 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:16:13,396 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:16:18,181 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:16:18,182 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:16:18,182 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:16:18,186 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:16:18,187 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:16:18,187 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:16:18,942 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:16:22,137 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:16:28,584 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:16:28,585 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:16:29,190 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:16:29,190 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:16:29,190 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:16:29,195 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:16:29,195 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:16:29,198 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:16:29,944 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:16:40,127 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:16:40,127 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:16:40,127 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:16:40,132 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:16:40,132 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:16:40,135 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:16:40,946 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:16:43,773 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:16:43,773 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:16:51,187 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:16:51,188 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:16:51,188 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:16:51,192 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:16:51,192 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:16:51,196 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:16:51,949 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:16:52,362 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:16:58,961 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:16:58,961 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:17:02,334 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:17:02,335 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:17:02,335 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:17:02,339 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:17:02,339 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:17:02,340 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:17:02,951 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:17:13,578 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:17:13,579 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:17:13,579 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:17:13,583 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:17:13,584 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:17:13,584 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:17:13,954 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:17:14,152 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:17:14,152 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:17:22,583 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:17:24,743 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:17:24,743 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:17:24,743 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:17:24,748 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:17:24,748 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:17:24,752 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:17:24,956 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:17:29,342 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:17:29,342 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:17:35,776 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:17:35,776 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:17:35,776 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:17:35,781 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:17:35,781 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:17:35,785 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:17:35,958 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:17:44,525 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:17:44,525 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:17:46,699 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:17:46,700 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:17:46,700 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:17:46,704 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:17:46,705 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:17:46,708 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:17:46,961 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:17:52,799 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:17:57,761 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:17:57,762 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:17:57,762 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:17:57,766 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:17:57,766 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:17:57,770 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:17:57,963 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:17:59,716 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:17:59,716 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:18:08,879 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:18:08,879 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:18:08,880 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:18:08,884 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:18:08,884 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:18:08,888 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:18:08,965 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:18:14,904 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:18:14,904 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:18:20,042 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:18:20,043 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:18:20,043 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:18:20,047 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:18:20,048 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:18:20,051 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:18:20,968 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:18:23,024 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:18:30,092 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:18:30,092 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:18:30,971 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:18:30,971 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:18:30,971 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:18:30,976 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:18:30,976 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:18:30,980 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:18:31,970 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:18:42,283 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:18:42,283 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:18:42,284 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:18:42,288 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:18:42,288 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:18:42,292 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:18:42,973 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:18:45,283 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:18:45,283 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:18:53,250 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:18:53,272 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:18:53,272 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:18:53,273 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:18:53,277 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:18:53,277 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:18:53,278 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:18:53,975 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:19:00,473 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:19:00,473 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:19:04,364 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:19:04,365 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:19:04,365 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:19:04,369 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:19:04,370 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:19:04,373 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:19:04,977 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:19:15,442 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:19:15,442 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:19:15,442 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:19:15,447 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:19:15,447 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:19:15,450 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:19:15,654 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:19:15,654 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:19:15,980 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:19:23,479 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:19:26,844 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:19:26,844 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:19:26,844 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:19:26,849 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:19:26,849 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:19:26,853 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:19:26,982 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:19:30,845 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:19:30,845 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:19:37,874 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:19:37,874 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:19:37,875 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:19:37,879 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:19:37,879 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:19:37,883 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:19:37,984 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:19:46,042 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:19:46,042 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:19:48,929 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:19:48,930 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:19:48,930 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:19:48,934 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:19:48,934 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:19:48,938 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:19:48,986 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:19:53,694 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:19:59,936 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:19:59,936 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:19:59,936 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:19:59,941 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:19:59,941 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:19:59,941 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:19:59,989 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:20:01,231 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:20:01,231 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:20:10,673 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:20:10,673 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:20:10,673 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:20:10,673 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:20:10,673 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:20:10,681 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:20:10,991 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:20:16,413 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:20:16,413 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:20:21,678 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:20:21,678 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:20:21,679 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:20:21,683 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:20:21,683 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:20:21,687 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:20:21,993 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:20:23,928 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:20:31,598 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:20:31,599 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:20:32,676 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:20:32,677 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:20:32,677 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:20:32,681 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:20:32,682 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:20:32,685 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:20:32,995 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:20:44,145 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:20:44,145 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:20:44,146 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:20:44,150 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:20:44,150 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:20:44,154 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:20:44,998 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:20:46,783 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:20:46,783 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:20:54,151 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:20:55,113 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:20:55,113 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:20:55,113 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:20:55,118 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:20:55,118 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:20:55,122 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:20:56,000 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:21:01,975 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:21:01,977 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:21:06,279 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:21:06,279 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:21:06,279 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:21:06,284 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:21:06,284 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:21:06,288 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:21:07,003 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:21:17,163 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:21:17,163 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:21:17,347 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:21:17,348 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:21:17,348 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:21:17,348 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:21:17,348 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:21:17,356 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:21:18,005 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:21:24,378 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:21:28,335 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:21:28,335 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:21:28,335 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:21:28,340 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:21:28,340 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:21:28,343 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:21:29,007 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:21:32,348 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:21:32,348 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:21:39,425 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:21:39,425 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:21:39,425 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:21:39,430 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:21:39,430 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:21:39,434 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:21:40,010 INFO    Thread-8  :9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:21:47,540 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-06 06:21:47,540 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: stop_status
+2021-12-06 06:21:50,510 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: poll_exit
+2021-12-06 06:21:50,511 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:21:50,511 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:21:50,511 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:21:50,511 DEBUG   SenderThread:9993 [sender.py:send():182] send: history
+2021-12-06 06:21:50,511 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:21:50,519 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:21:50,519 DEBUG   SenderThread:9993 [sender.py:send():182] send: telemetry
+2021-12-06 06:21:50,519 DEBUG   SenderThread:9993 [sender.py:send():182] send: exit
+2021-12-06 06:21:50,519 INFO    SenderThread:9993 [sender.py:send_exit():291] handling exit code: 0
+2021-12-06 06:21:50,519 INFO    SenderThread:9993 [sender.py:send_exit():293] handling runtime: 780
+2021-12-06 06:21:50,520 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:21:50,520 INFO    SenderThread:9993 [sender.py:send_exit():303] send defer
+2021-12-06 06:21:50,520 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: poll_exit
+2021-12-06 06:21:50,520 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: defer
+2021-12-06 06:21:50,520 INFO    HandlerThread:9993 [handler.py:handle_request_defer():145] handle defer: 0
+2021-12-06 06:21:50,520 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: defer
+2021-12-06 06:21:50,520 INFO    SenderThread:9993 [sender.py:send_request_defer():312] handle sender defer: 0
+2021-12-06 06:21:50,520 INFO    SenderThread:9993 [sender.py:transition_state():316] send defer: 1
+2021-12-06 06:21:50,520 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: defer
+2021-12-06 06:21:50,520 INFO    HandlerThread:9993 [handler.py:handle_request_defer():145] handle defer: 1
+2021-12-06 06:21:50,565 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: defer
+2021-12-06 06:21:50,566 INFO    SenderThread:9993 [sender.py:send_request_defer():312] handle sender defer: 1
+2021-12-06 06:21:50,566 INFO    SenderThread:9993 [sender.py:transition_state():316] send defer: 2
+2021-12-06 06:21:50,566 DEBUG   SenderThread:9993 [sender.py:send():182] send: stats
+2021-12-06 06:21:50,566 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: defer
+2021-12-06 06:21:50,566 INFO    HandlerThread:9993 [handler.py:handle_request_defer():145] handle defer: 2
+2021-12-06 06:21:50,567 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: defer
+2021-12-06 06:21:50,567 INFO    SenderThread:9993 [sender.py:send_request_defer():312] handle sender defer: 2
+2021-12-06 06:21:50,567 INFO    SenderThread:9993 [sender.py:transition_state():316] send defer: 3
+2021-12-06 06:21:50,567 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: defer
+2021-12-06 06:21:50,567 INFO    HandlerThread:9993 [handler.py:handle_request_defer():145] handle defer: 3
+2021-12-06 06:21:50,567 DEBUG   SenderThread:9993 [sender.py:send():182] send: summary
+2021-12-06 06:21:50,567 INFO    SenderThread:9993 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-06 06:21:50,567 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: defer
+2021-12-06 06:21:50,567 INFO    SenderThread:9993 [sender.py:send_request_defer():312] handle sender defer: 3
+2021-12-06 06:21:50,567 INFO    SenderThread:9993 [sender.py:transition_state():316] send defer: 4
+2021-12-06 06:21:50,567 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: defer
+2021-12-06 06:21:50,568 INFO    HandlerThread:9993 [handler.py:handle_request_defer():145] handle defer: 4
+2021-12-06 06:21:50,568 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: defer
+2021-12-06 06:21:50,568 INFO    SenderThread:9993 [sender.py:send_request_defer():312] handle sender defer: 4
+2021-12-06 06:21:50,621 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: poll_exit
+2021-12-06 06:21:50,789 INFO    SenderThread:9993 [sender.py:transition_state():316] send defer: 5
+2021-12-06 06:21:50,789 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: poll_exit
+2021-12-06 06:21:50,789 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: defer
+2021-12-06 06:21:50,790 INFO    HandlerThread:9993 [handler.py:handle_request_defer():145] handle defer: 5
+2021-12-06 06:21:50,790 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: defer
+2021-12-06 06:21:50,790 INFO    SenderThread:9993 [sender.py:send_request_defer():312] handle sender defer: 5
+2021-12-06 06:21:50,790 INFO    SenderThread:9993 [dir_watcher.py:finish():282] shutting down directory watcher
+2021-12-06 06:21:50,890 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: poll_exit
+2021-12-06 06:21:51,011 INFO    SenderThread:9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:21:51,011 INFO    SenderThread:9993 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/config.yaml
+2021-12-06 06:21:51,013 INFO    SenderThread:9993 [dir_watcher.py:finish():312] scan: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files
+2021-12-06 06:21:51,013 INFO    SenderThread:9993 [dir_watcher.py:finish():318] scan save: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/config.yaml config.yaml
+2021-12-06 06:21:51,013 INFO    SenderThread:9993 [dir_watcher.py:finish():318] scan save: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/output.log output.log
+2021-12-06 06:21:51,016 INFO    SenderThread:9993 [dir_watcher.py:finish():318] scan save: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json wandb-summary.json
+2021-12-06 06:21:51,016 INFO    SenderThread:9993 [dir_watcher.py:finish():318] scan save: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/conda-environment.yaml conda-environment.yaml
+2021-12-06 06:21:51,016 INFO    SenderThread:9993 [dir_watcher.py:finish():318] scan save: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/requirements.txt requirements.txt
+2021-12-06 06:21:51,016 INFO    SenderThread:9993 [dir_watcher.py:finish():318] scan save: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-metadata.json wandb-metadata.json
+2021-12-06 06:21:51,016 INFO    SenderThread:9993 [sender.py:transition_state():316] send defer: 6
+2021-12-06 06:21:51,016 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: poll_exit
+2021-12-06 06:21:51,017 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: defer
+2021-12-06 06:21:51,023 INFO    HandlerThread:9993 [handler.py:handle_request_defer():145] handle defer: 6
+2021-12-06 06:21:51,024 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: defer
+2021-12-06 06:21:51,024 INFO    SenderThread:9993 [sender.py:send_request_defer():312] handle sender defer: 6
+2021-12-06 06:21:51,024 INFO    SenderThread:9993 [file_pusher.py:finish():177] shutting down file pusher
+2021-12-06 06:21:51,120 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: poll_exit
+2021-12-06 06:21:51,120 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: poll_exit
+2021-12-06 06:21:51,221 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: poll_exit
+2021-12-06 06:21:51,222 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: poll_exit
+2021-12-06 06:21:51,323 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: poll_exit
+2021-12-06 06:21:51,323 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: poll_exit
+2021-12-06 06:21:51,424 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: poll_exit
+2021-12-06 06:21:51,424 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: poll_exit
+2021-12-06 06:21:51,525 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: poll_exit
+2021-12-06 06:21:51,525 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: poll_exit
+2021-12-06 06:21:51,626 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: poll_exit
+2021-12-06 06:21:51,626 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: poll_exit
+2021-12-06 06:21:51,688 INFO    Thread-13 :9993 [upload_job.py:push():137] Uploaded file /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/wandb-summary.json
+2021-12-06 06:21:51,692 INFO    Thread-12 :9993 [upload_job.py:push():137] Uploaded file /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/config.yaml
+2021-12-06 06:21:51,699 INFO    Thread-15 :9993 [upload_job.py:push():137] Uploaded file /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/requirements.txt
+2021-12-06 06:21:51,724 INFO    Thread-14 :9993 [upload_job.py:push():137] Uploaded file /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/files/conda-environment.yaml
+2021-12-06 06:21:51,728 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: poll_exit
+2021-12-06 06:21:51,728 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: poll_exit
+2021-12-06 06:21:51,829 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: poll_exit
+2021-12-06 06:21:51,829 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: poll_exit
+2021-12-06 06:21:51,925 INFO    Thread-7  :9993 [sender.py:transition_state():316] send defer: 7
+2021-12-06 06:21:51,925 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: defer
+2021-12-06 06:21:51,925 INFO    HandlerThread:9993 [handler.py:handle_request_defer():145] handle defer: 7
+2021-12-06 06:21:51,925 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: defer
+2021-12-06 06:21:51,925 INFO    SenderThread:9993 [sender.py:send_request_defer():312] handle sender defer: 7
+2021-12-06 06:21:51,930 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: poll_exit
+2021-12-06 06:21:52,310 INFO    SenderThread:9993 [sender.py:transition_state():316] send defer: 8
+2021-12-06 06:21:52,310 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: poll_exit
+2021-12-06 06:21:52,310 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: defer
+2021-12-06 06:21:52,310 INFO    HandlerThread:9993 [handler.py:handle_request_defer():145] handle defer: 8
+2021-12-06 06:21:52,310 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: defer
+2021-12-06 06:21:52,310 INFO    SenderThread:9993 [sender.py:send_request_defer():312] handle sender defer: 8
+2021-12-06 06:21:52,310 INFO    SenderThread:9993 [sender.py:transition_state():316] send defer: 9
+2021-12-06 06:21:52,311 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: defer
+2021-12-06 06:21:52,311 INFO    HandlerThread:9993 [handler.py:handle_request_defer():145] handle defer: 9
+2021-12-06 06:21:52,311 DEBUG   SenderThread:9993 [sender.py:send():182] send: final
+2021-12-06 06:21:52,311 DEBUG   SenderThread:9993 [sender.py:send():182] send: footer
+2021-12-06 06:21:52,311 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: defer
+2021-12-06 06:21:52,311 INFO    SenderThread:9993 [sender.py:send_request_defer():312] handle sender defer: 9
+2021-12-06 06:21:52,411 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: poll_exit
+2021-12-06 06:21:52,411 DEBUG   SenderThread:9993 [sender.py:send_request():196] send_request: poll_exit
+2021-12-06 06:21:52,411 INFO    SenderThread:9993 [file_pusher.py:join():182] waiting for file pusher
+2021-12-06 06:21:52,412 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: get_summary
+2021-12-06 06:21:52,412 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: sampled_history
+2021-12-06 06:21:52,413 DEBUG   HandlerThread:9993 [handler.py:handle_request():128] handle_request: shutdown
+2021-12-06 06:21:52,413 INFO    HandlerThread:9993 [handler.py:finish():677] shutting down handler
+2021-12-06 06:21:53,311 INFO    WriterThread:9993 [datastore.py:close():281] close: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211206_060849-tk0ccw99/run-tk0ccw99.wandb
+2021-12-06 06:21:53,411 INFO    SenderThread:9993 [sender.py:finish():979] shutting down sender
+2021-12-06 06:21:53,411 INFO    SenderThread:9993 [file_pusher.py:finish():177] shutting down file pusher
+2021-12-06 06:21:53,411 INFO    SenderThread:9993 [file_pusher.py:join():182] waiting for file pusher
+2021-12-06 06:21:53,412 INFO    MainThread:9993 [internal.py:handle_exit():76] Internal process exited

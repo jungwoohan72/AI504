@@ -1,0 +1,70 @@
+2021-12-05 17:17:04,103 INFO    MainThread:19975 [internal.py:wandb_internal():86] W&B internal server running at pid: 19975, started at: 2021-12-05 17:17:04.103529
+2021-12-05 17:17:04,106 DEBUG   HandlerThread:19975 [handler.py:handle_request():128] handle_request: check_version
+2021-12-05 17:17:04,106 INFO    WriterThread:19975 [datastore.py:open_for_write():77] open: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211205_171703-f28uxsrp/run-f28uxsrp.wandb
+2021-12-05 17:17:04,107 DEBUG   SenderThread:19975 [sender.py:send():182] send: header
+2021-12-05 17:17:04,107 DEBUG   SenderThread:19975 [sender.py:send_request():196] send_request: check_version
+2021-12-05 17:17:04,140 DEBUG   SenderThread:19975 [sender.py:send():182] send: run
+2021-12-05 17:17:04,375 DEBUG   HandlerThread:19975 [handler.py:handle_request():128] handle_request: run_start
+2021-12-05 17:17:04,376 INFO    SenderThread:19975 [dir_watcher.py:__init__():168] watching files in: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211205_171703-f28uxsrp/files
+2021-12-05 17:17:04,376 INFO    SenderThread:19975 [sender.py:_start_run_threads():740] run started: f28uxsrp with start time 1638692223
+2021-12-05 17:17:04,377 DEBUG   SenderThread:19975 [sender.py:send():182] send: summary
+2021-12-05 17:17:04,377 INFO    SenderThread:19975 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-05 17:17:05,379 INFO    Thread-8  :19975 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211205_171703-f28uxsrp/files/wandb-summary.json
+2021-12-05 17:17:05,513 DEBUG   HandlerThread:19975 [meta.py:__init__():39] meta init
+2021-12-05 17:17:05,513 DEBUG   HandlerThread:19975 [meta.py:__init__():53] meta init done
+2021-12-05 17:17:05,522 DEBUG   HandlerThread:19975 [meta.py:probe():210] probe
+2021-12-05 17:17:05,523 DEBUG   HandlerThread:19975 [meta.py:_setup_git():200] setup git
+2021-12-05 17:17:05,544 DEBUG   HandlerThread:19975 [meta.py:_setup_git():207] setup git done
+2021-12-05 17:17:05,544 DEBUG   HandlerThread:19975 [meta.py:_save_pip():57] save pip
+2021-12-05 17:17:05,544 DEBUG   HandlerThread:19975 [meta.py:_save_pip():71] save pip done
+2021-12-05 17:17:05,544 DEBUG   HandlerThread:19975 [meta.py:_save_conda():78] save conda
+2021-12-05 17:17:06,381 INFO    Thread-8  :19975 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211205_171703-f28uxsrp/files/requirements.txt
+2021-12-05 17:17:06,382 INFO    Thread-8  :19975 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211205_171703-f28uxsrp/files/conda-environment.yaml
+2021-12-05 17:17:08,306 DEBUG   HandlerThread:19975 [meta.py:_save_conda():86] save conda done
+2021-12-05 17:17:08,306 DEBUG   HandlerThread:19975 [meta.py:probe():252] probe done
+2021-12-05 17:17:08,308 DEBUG   SenderThread:19975 [sender.py:send():182] send: files
+2021-12-05 17:17:08,309 INFO    SenderThread:19975 [sender.py:_save_file():873] saving file wandb-metadata.json with policy now
+2021-12-05 17:17:08,316 DEBUG   HandlerThread:19975 [handler.py:handle_request():128] handle_request: stop_status
+2021-12-05 17:17:08,316 DEBUG   SenderThread:19975 [sender.py:send_request():196] send_request: stop_status
+2021-12-05 17:17:08,382 INFO    Thread-8  :19975 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211205_171703-f28uxsrp/files/conda-environment.yaml
+2021-12-05 17:17:08,382 INFO    Thread-8  :19975 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211205_171703-f28uxsrp/files/wandb-metadata.json
+2021-12-05 17:17:08,382 INFO    Thread-8  :19975 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211205_171703-f28uxsrp/files/output.log
+2021-12-05 17:17:08,956 INFO    Thread-11 :19975 [upload_job.py:push():137] Uploaded file /tmp/tmpgzil356kwandb/1hn67y2k-wandb-metadata.json
+2021-12-05 17:17:12,300 WARNING MainThread:19975 [internal.py:wandb_internal():145] Internal process interrupt: 1
+2021-12-05 17:17:12,331 DEBUG   SenderThread:19975 [sender.py:send():182] send: telemetry
+2021-12-05 17:17:12,331 DEBUG   SenderThread:19975 [sender.py:send():182] send: exit
+2021-12-05 17:17:12,331 INFO    SenderThread:19975 [sender.py:send_exit():291] handling exit code: 1
+2021-12-05 17:17:12,331 INFO    SenderThread:19975 [sender.py:send_exit():293] handling runtime: 7
+2021-12-05 17:17:12,332 DEBUG   HandlerThread:19975 [handler.py:handle_request():128] handle_request: poll_exit
+2021-12-05 17:17:12,333 INFO    SenderThread:19975 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-05 17:17:12,333 INFO    SenderThread:19975 [sender.py:send_exit():303] send defer
+2021-12-05 17:17:12,333 DEBUG   SenderThread:19975 [sender.py:send_request():196] send_request: poll_exit
+2021-12-05 17:17:12,334 DEBUG   HandlerThread:19975 [handler.py:handle_request():128] handle_request: defer
+2021-12-05 17:17:12,334 INFO    HandlerThread:19975 [handler.py:handle_request_defer():145] handle defer: 0
+2021-12-05 17:17:12,334 DEBUG   SenderThread:19975 [sender.py:send_request():196] send_request: defer
+2021-12-05 17:17:12,334 INFO    SenderThread:19975 [sender.py:send_request_defer():312] handle sender defer: 0
+2021-12-05 17:17:12,334 INFO    SenderThread:19975 [sender.py:transition_state():316] send defer: 1
+2021-12-05 17:17:12,335 DEBUG   HandlerThread:19975 [handler.py:handle_request():128] handle_request: defer
+2021-12-05 17:17:12,335 INFO    HandlerThread:19975 [handler.py:handle_request_defer():145] handle defer: 1
+2021-12-05 17:17:12,383 INFO    Thread-8  :19975 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211205_171703-f28uxsrp/files/wandb-summary.json
+2021-12-05 17:17:12,418 DEBUG   SenderThread:19975 [sender.py:send_request():196] send_request: defer
+2021-12-05 17:17:12,418 INFO    SenderThread:19975 [sender.py:send_request_defer():312] handle sender defer: 1
+2021-12-05 17:17:12,418 INFO    SenderThread:19975 [sender.py:transition_state():316] send defer: 2
+2021-12-05 17:17:12,419 DEBUG   SenderThread:19975 [sender.py:send():182] send: stats
+2021-12-05 17:17:12,419 DEBUG   HandlerThread:19975 [handler.py:handle_request():128] handle_request: defer
+2021-12-05 17:17:12,419 INFO    HandlerThread:19975 [handler.py:handle_request_defer():145] handle defer: 2
+2021-12-05 17:17:12,419 DEBUG   SenderThread:19975 [sender.py:send_request():196] send_request: defer
+2021-12-05 17:17:12,419 INFO    SenderThread:19975 [sender.py:send_request_defer():312] handle sender defer: 2
+2021-12-05 17:17:12,419 INFO    SenderThread:19975 [sender.py:transition_state():316] send defer: 3
+2021-12-05 17:17:12,419 DEBUG   HandlerThread:19975 [handler.py:handle_request():128] handle_request: defer
+2021-12-05 17:17:12,419 INFO    HandlerThread:19975 [handler.py:handle_request_defer():145] handle defer: 3
+2021-12-05 17:17:12,420 DEBUG   SenderThread:19975 [sender.py:send():182] send: summary
+2021-12-05 17:17:12,420 INFO    SenderThread:19975 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-05 17:17:12,420 DEBUG   SenderThread:19975 [sender.py:send_request():196] send_request: defer
+2021-12-05 17:17:12,420 INFO    SenderThread:19975 [sender.py:send_request_defer():312] handle sender defer: 3
+2021-12-05 17:17:12,420 INFO    SenderThread:19975 [sender.py:transition_state():316] send defer: 4
+2021-12-05 17:17:12,420 DEBUG   HandlerThread:19975 [handler.py:handle_request():128] handle_request: defer
+2021-12-05 17:17:12,420 INFO    HandlerThread:19975 [handler.py:handle_request_defer():145] handle defer: 4
+2021-12-05 17:17:12,420 DEBUG   SenderThread:19975 [sender.py:send_request():196] send_request: defer
+2021-12-05 17:17:12,421 INFO    SenderThread:19975 [sender.py:send_request_defer():312] handle sender defer: 4
+2021-12-05 17:17:12,438 DEBUG   HandlerThread:19975 [handler.py:handle_request():128] handle_request: poll_exit

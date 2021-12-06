@@ -1,0 +1,22 @@
+wandb_version: 1
+
+attention_heads:
+  value: 4
+batch_size:
+  value: 64
+decoder_layers:
+  value: 3
+dropout:
+  value: 0.2
+emb_dim:
+  value: 32
+encoder_layers:
+  value: 3
+ffn_dim:
+  value: 32
+lr:
+  value: 0.0001
+nepochs:
+  value: 50
+patience:
+  value: 15

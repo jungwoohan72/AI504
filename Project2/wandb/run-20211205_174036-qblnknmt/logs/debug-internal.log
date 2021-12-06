@@ -1,0 +1,12 @@
+2021-12-05 17:40:37,066 INFO    MainThread:21986 [internal.py:wandb_internal():86] W&B internal server running at pid: 21986, started at: 2021-12-05 17:40:37.065806
+2021-12-05 17:40:37,069 DEBUG   HandlerThread:21986 [handler.py:handle_request():128] handle_request: check_version
+2021-12-05 17:40:37,069 INFO    WriterThread:21986 [datastore.py:open_for_write():77] open: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211205_174036-qblnknmt/run-qblnknmt.wandb
+2021-12-05 17:40:37,071 DEBUG   SenderThread:21986 [sender.py:send():182] send: header
+2021-12-05 17:40:37,071 DEBUG   SenderThread:21986 [sender.py:send_request():196] send_request: check_version
+2021-12-05 17:40:37,117 DEBUG   SenderThread:21986 [sender.py:send():182] send: run
+2021-12-05 17:40:37,352 DEBUG   HandlerThread:21986 [handler.py:handle_request():128] handle_request: run_start
+2021-12-05 17:40:37,532 INFO    SenderThread:21986 [dir_watcher.py:__init__():168] watching files in: /home/jungwoo/Coursework/AI504/Project2/wandb/run-20211205_174036-qblnknmt/files
+2021-12-05 17:40:37,532 INFO    SenderThread:21986 [sender.py:_start_run_threads():740] run started: qblnknmt with start time 1638693636
+2021-12-05 17:40:37,532 DEBUG   SenderThread:21986 [sender.py:send():182] send: summary
+2021-12-05 17:40:37,532 INFO    SenderThread:21986 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-12-05 17:40:37,840 WARNING MainThread:21986 [internal.py:wandb_internal():145] Internal process interrupt: 1
