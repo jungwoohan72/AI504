@@ -34,3 +34,4 @@ Traceback (most recent call last):
     handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
 ValueError: signal only works in main thread
 2021-12-06 13:27:00,778 INFO    Thread-423:22011 [wandb_init.py:init():565] run started, returning control to user process
+2021-12-06 13:42:33,886 INFO    Thread-423:22011 [wandb_run.py:finish():1254] finishing run jungwoohan72/NMT/a5r5rn5k
